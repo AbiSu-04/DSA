@@ -1,82 +1,82 @@
 // // array
-// #include<stdio.h>
-// //enqueue is adding , dequeue is delete
+#include<stdio.h>
+//enqueue is adding , dequeue is delete
 
-// #define N 5
-// int queue[N];
-// int front=-1;
-// int rear=-1;
-// void enqueue(int x){
-//     if(rear==N-1){
-//         printf("Oveflow");
-//     }
-//     else if(front==-1 && rear ==-1){ //if the queue is empty then front and rear will the same
-//         front=rear=0;
-//         queue[rear]=x;
-//     }
-//     else{ //if the queue already has an element and needs to add the next element
-//         rear++; // suppose the first few elemnts are empty , enqueue will not add as rear has reached it's mazimun so instead we use (rear+1)%N
-//         queue[rear]=x;
-//     }
-// }
+#define N 5
+int queue[N];
+int front=-1;
+int rear=-1;
+void enqueue(int x){
+    if(rear==N-1){
+        printf("Oveflow");
+    }
+    else if(front==-1 && rear ==-1){ //if the queue is empty then front and rear will the same
+        front=rear=0;
+        queue[rear]=x;
+    }
+    else{ //if the queue already has an element and needs to add the next element
+        rear++; // suppose the first few elemnts are empty , enqueue will not add as rear has reached it's mazimun so instead we use (rear+1)%N
+        queue[rear]=x;
+    }
+}
 
-// void dequeue( ){
-//     if(front==-1 && rear==-1){ //the queue is empty and no elem can be deleted
-//         printf("Undeflow");
-//     }
-//     else if(front==rear){ // there is only one element and both front and rear point at it
-//         front=rear=-1; //condition inputed for empty queue
-//     }
-//     else{
-//         //printf("Element %d is dequeued\n",queue[x]);
-//         front++; // the dequeued elemnt is printed and the front is incremented , because the First element is what gets deleted and next tha front
-//     }
-// }
+void dequeue( ){
+    if(front==-1 && rear==-1){ //the queue is empty and no elem can be deleted
+        printf("Undeflow");
+    }
+    else if(front==rear){ // there is only one element and both front and rear point at it
+        front=rear=-1; //condition inputed for empty queue
+    }
+    else{
+        //printf("Element %d is dequeued\n",queue[x]);
+        front++; // the dequeued elemnt is printed and the front is incremented , because the First element is what gets deleted and next tha front
+    }
+}
 
-// void display(){
-//     if(front==-1 && rear==-1){
-//         printf("Empty queue");
-//     }
-//     else{
-//         printf("The Updated queue is:\n");
-//         for(int i=front;i<=rear;i++){
-//             printf("%d\n",queue[i]);
-//         }
-//     }
-// }
-// void peek(){ //used to print the first element
-//     if(front==-1 && rear==-1){
-//         printf("Empty Queue");
-//     }
-//     else{
-//         printf("%d",queue[front]);
-//     }
-// }
+void display(){
+    if(front==-1 && rear==-1){
+        printf("Empty queue");
+    }
+    else{
+        printf("The Updated queue is:\n");
+        for(int i=front;i<=rear;i++){
+            printf("%d\n",queue[i]);
+        }
+    }
+}
+void peek(){ //used to print the first element
+    if(front==-1 && rear==-1){
+        printf("Empty Queue");
+    }
+    else{
+        printf("%d",queue[front]);
+    }
+}
 
-// int main(){
-//      int data;
-//     printf("Enter the elements");
-//     for(int i=0;i<5;i++){
-//         scanf("%d",&data);
-//         enqueue(data);
-//     }
-//     // enqueue(1);
-//     // enqueue(2);
-//     // enqueue(3); 
-//     // enqueue(4);
-//     // enqueue(5);
-//     // dequeue(1); // why we're giving parameter when we know the first element is what will be deleted
-//     // display();
-//     printf("peek value:");
-//     peek();
-//     printf("\n");
-//     dequeue( );
-//     printf("Queue is:\n");
-//     for(int i=front;i<=rear;i++){
-//         printf("%d\n",queue[i]);
-//     }
+int main(){
+     int data;
+    printf("Enter the elements");
+    for(int i=0;i<5;i++){
+        scanf("%d",&data);
+        enqueue(data);
+    }
+    // enqueue(1);
+    // enqueue(2);
+    // enqueue(3); 
+    // enqueue(4);
+    // enqueue(5);
+    // dequeue(1); // why we're giving parameter when we know the first element is what will be deleted
+    // display();
+    printf("peek value:");
+    peek();
+    printf("\n");
+    dequeue( );
+    printf("Queue is:\n");
+    for(int i=front;i<=rear;i++){
+        printf("%d\n",queue[i]);
+    }
     
-// }
+}
 
 // linked list
 #include <stdio.h>

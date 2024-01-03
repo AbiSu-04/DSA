@@ -67,46 +67,46 @@ void heapsort(int* a,int n)
         heapifydown(a,i,0);
     }
 }
-int main()
-{
-    int i,j,n;
-    printf("Enter no of elements:");
-    scanf("%d",&n);
-    int* a=(int*)malloc(n*sizeof(int));
-    printf("Enter the elements:");
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&*(a+i));
-    }
-    printf("\nArray:");
-    for(i=0;i<n;i++)
-    {
-        printf("%3d",*(a+i));
-    }
-    for(i=0;i<n;i++)
-    {
-        heapifyup(a,n,i);
-    }
-    printf("\nHeapify Up:");
-    for(i=0;i<n;i++)
-    {
-        printf("%3d",*(a+i));
-    }
-    printf("\nMin element:%2d",a[0]);
-    deletemin(a,&n);
-    printf("\nDelete Min:");
-    for(i=0;i<n;i++)
-    {
-        printf("%3d",*(a+i));
-    }
-    printf("\nMin element:%2d",a[0]);
-    heapsort(a,n);
-    printf("\nHeap Sort:");
-    for(i=0;i<n;i++)
-    {
-        printf("%3d",*(a+i));
-    }
-}
+// int main()
+// {
+//     int i,j,n;
+//     printf("Enter no of elements:");
+//     scanf("%d",&n);
+//     int* a=(int*)malloc(n*sizeof(int));
+//     printf("Enter the elements:");
+//     for(i=0;i<n;i++)
+//     {
+//         scanf("%d",&*(a+i));
+//     }
+//     printf("\nArray:");
+//     for(i=0;i<n;i++)
+//     {
+//         printf("%3d",*(a+i));
+//     }
+//     for(i=0;i<n;i++)
+//     {
+//         heapifyup(a,n,i);
+//     }
+//     printf("\nHeapify Up:");
+//     for(i=0;i<n;i++)
+//     {
+//         printf("%3d",*(a+i));
+//     }
+//     printf("\nMin element:%2d",a[0]);
+//     deletemin(a,&n);
+//     printf("\nDelete Min:");
+//     for(i=0;i<n;i++)
+//     {
+//         printf("%3d",*(a+i));
+//     }
+//     printf("\nMin element:%2d",a[0]);
+//     heapsort(a,n);
+//     printf("\nHeap Sort:");
+//     for(i=0;i<n;i++)
+//     {
+//         printf("%3d",*(a+i));
+//     }
+// }
 
 
 

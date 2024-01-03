@@ -111,7 +111,7 @@ void deletelastnode(struct node** start) {
         } else {
             struct node* current = *start;
             while (current->next->next != NULL)
-                current = current->next;
+                current = current->next; //outside loop thana irukannum?
                 free(current->next);
             current->next = NULL;
             

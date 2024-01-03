@@ -41,14 +41,12 @@ int evaluate(int operand1, int operand2, char op) {
             exit(1);
     }
 }
-
 int main() {
     int size;
     printf("Enter the size of the stack: ");
     scanf("%d", &size);
     int arr[size];
     int top = -1; // Initialize top to -1
-
     char expression[100];
     printf("Enter the postfix expression: ");
     scanf("%s", expression);
@@ -65,7 +63,6 @@ int main() {
             top = push(arr, top, size, result);
         }
     }
-
     if (top == 0) {
         int finalResult = pop(arr, size, &top);
         printf("Result of postfix expression: %d\n", finalResult);
